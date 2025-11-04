@@ -25,6 +25,23 @@ Route::get('/profile', function () {
 });
 
 Route::get('/produk', function () {
-     return view('produk');
-;
+    $page_title = 'Produk';
+
+    $products = [
+        [
+            "kode_produk" => "Prdk01",
+            "nama_produk" => "Montitor",
+            "jenis_produk" => "Barang Elektronik",
+            "harga_produk" => 2000000
+        ],
+        [
+            "kode_produk" => "Prdk02",
+            "nama_produk" => "Harddisk",
+            "jenis_produk" => "Alat Tulis",
+            "harga_produk" => 150000
+        ]
+    ];
+
+    return view('produk', compact('page_title', 'products'));
 });
+
