@@ -23,3 +23,8 @@ Route::get('/profile', function () {
     return view('profile')->with('nama', $nama)
 ;
 });
+
+Route::get('/produk', function () {
+     return view('produk');
+;
+});
